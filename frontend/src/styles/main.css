@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.calculator {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.calculator input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.calculator input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.calculator-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calculator-buttons button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calculator-buttons button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.calculator-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.result-display {
+  padding: 1rem;
+  min-height: 3rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cached-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  color: #666;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 0.75rem;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 320px) {
+  .app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .calculator {
+    padding: 1rem;
+  }
+
+  .calculator input {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .calculator-buttons button {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,23 @@
+# API_CONTRACT.md
+
+## Endpoints
+
+---
+
+### 1. Calculate Expression
+
+| Method | Path            | Auth Required | Request Body Schema                                                                 | Response Status | Response Body Schema                                                                                  |
+|--------|-----------------|--------------|-------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------|
+| POST   | /api/calculate  | Yes          | `expression` (string, required) <br> Example:<br> `{ "expression": "2+2-1" }`      | 200             | `result` (number)<br>`expression` (string)<br>`cached` (boolean)<br>Example:<br>`{ "result": 3, "expression": "2+2-1", "cached": false }` |
+|        |                 |              |                                                                                     | 400             | `error` (string)<br>`message` (string)<br>Example:<br>`{ "error": "InvalidExpression", "message": "The provided expression is invalid." }` |
+|        |                 |              |                                                                                     | 401             | `error` (string)<br>`message` (string)<br>Example:<br>`{ "error": "Unauthorized", "message": "JWT token is missing or invalid." }`         |
+
+---
+
+### 2. Health Check
+
+| Method | Path         | Auth Required | Request Body Schema | Response Status | Response Body Schema                         |
+|--------|--------------|--------------|--------------------|-----------------|----------------------------------------------|
+| GET    | /api/health  | No           | _None_             | 200             | `status` (string)<br>Example:<br>`{ "status": "ok" }` |
+
+---

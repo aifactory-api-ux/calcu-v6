@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1777343553802" clover="3.2.0">
+  <project timestamp="1777343553803" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
+    <file name="health.controller.ts" path="/workspace/cbd8a08b-d903-418b-a728-2c3ae1b7016b/backend/src/health.controller.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+    </file>
+  </project>
+</coverage>
